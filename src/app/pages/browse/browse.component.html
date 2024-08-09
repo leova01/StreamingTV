@@ -1,0 +1,10 @@
+<app-navBar (filtrado)="filtrarbrowser($event)" (Navselectors)="NavegacionKeyboard($event)"></app-navBar>
+
+<div class="">
+    <div class="row d-flex">
+        <div class="col  text-light p-5">
+            <app-carousel [movieContent]="movieContent" [title]="title" (CarouselOptions)="CarouselKeyboard($event)"></app-carousel>
+            <app-carousel2 [movieContent2]="movieContent2" [title]="'All Movies'" (CarouselOptions)="CarouselKeyboard($event)"></app-carousel2>
+        </div> 
+    </div>
+</div>

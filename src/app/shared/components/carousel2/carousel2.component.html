@@ -1,0 +1,26 @@
+<section class="movie-section">
+  <h1>{{title}}</h1>
+
+ 
+
+  <div class="movie-container">
+    <button class="navigation-button previous netflix-previous2">&lt;</button>
+
+    <!-- Display netflix movies here -->
+    <div class="movies-box netflix-container2">
+     
+      <div *ngFor="let movie of movieContent2"  >
+        <img [src]="movie.poster_path | image"
+        [routerLink]="['/details/',movie.id]"
+        class="selector3"
+        />
+
+      </div>
+    </div>
+
+    <button class="navigation-button next netflix-next2">&gt;</button>
+    <button class="d-none restart-scroll2"></button>
+  </div>
+</section>
+
+

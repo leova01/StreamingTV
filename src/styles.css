@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0 0 0 0;
+    padding: 0;
+    background: #0c0c0c;
+    overflow-x: hidden;
+}
+
+.selected{
+  border: solid 2px rgba(145, 42, 63, 1);
+  outline: none; 
+  border-radius: 10px;
+}
+
+
+@keyframes slide-out{
+  to{
+    transform: translate(-900px);
+  }
+}
+
+@keyframes slide-in{
+  from{
+    transform: translate(-900px);
+  }
+}
+
+::view-transition-new(serie-slide){
+  animation: slide-in 500ms;
+  animation-name: -ua-view-transition-fade-in, slide-in;
+}
+
+::view-transition-old(serie-slide){
+  animation: slide-out 500ms;
+  animation-name: -ua-view-transition-fade-out, slide-out;
+}

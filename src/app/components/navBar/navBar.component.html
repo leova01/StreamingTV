@@ -1,0 +1,25 @@
+<header>
+  <nav class="px-3 navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand estilo_logo" id="titulo" href="#">NOTNETFLIX</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+  
+        <li class="nav-item ">
+            <a class="nav-link selector" [routerLink]="['/browse']" 
+            (click)="filtrar('all')">All</a>
+        </li>
+  
+        <li class="nav-item "   *ngFor="let filtro of filtros">
+            <a class="nav-link selector" style="cursor: pointer;"
+            (click)="filtrar(filtro)" >{{filtro[0]}}</a>
+        </li>
+        
+  
+  
+    </ul>
+    </div>
+  </nav>
+</header>
