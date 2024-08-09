@@ -5,17 +5,19 @@ import { MoviesService } from '../../shared/services/movies.service';
 import { IVideoContent } from '../../shared/models/video-content.interface';
 import { Carousel2Component } from '../../shared/components/carousel2/carousel2.component';
 import { fromEvent } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-browse',
   templateUrl: './browse.component.html',
   styleUrls: ['./browse.component.css'],
   standalone: true,
-  imports: [NavBarComponent, CarouselComponent, Carousel2Component],
+  imports: [NavBarComponent, CarouselComponent, Carousel2Component,CommonModule],
 })
 export class BrowseComponent implements OnInit, AfterViewInit {
   movieContent: IVideoContent[] = [];
   movieContent2: IVideoContent[] = [];
+
 
   title: string = 'Top Movies';
   NavegacionKeyboardV: any = [];
